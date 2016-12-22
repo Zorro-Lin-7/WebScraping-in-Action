@@ -5,3 +5,4 @@
 * [Pandas爬取中国银行外汇牌价信息](https://github.com/Zorro-Lin-7/WebScraping-in-Action/blob/master/pandas%E7%88%AC%E5%8F%96%E5%A4%96%E6%B1%87%E7%89%8C%E4%BB%B7.ipynb)：只用Pandas，只用Pandas，只用Pandas！
 * [用PhantomJS+Selenium 处理斗鱼异步加载](https://github.com/Zorro-Lin-7/WebScraping-in-Action/blob/master/%E6%96%97%E9%B1%BCAJAX.py)：对于AJAX异步请求数据的网页，一个方式是通过url拼接，分页采集；另一个方法是使用Selenium。但发现Phantomjs 有点慢~~
 * [爬取591租房信息（AJAX）](https://github.com/Zorro-Lin-7/WebScraping-in-Action/blob/master/rent591.py)：Selenium、MongoDB
+* “轻想连载“是我用了1年多的类博客产品。爬取了一些数据准备分析。 to be continued
