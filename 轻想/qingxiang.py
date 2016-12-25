@@ -27,6 +27,9 @@ headers={
 def get_links(url):
     base_url='http://www.lianzai.me'
     try:
+    	proxy_ip=random.choice(proxy_list) # 随机获取代理ip
+    	proxies={'http':proxy_ip}
+    	print('代理ip为：',proxies)
     	wb_data=requests.get(url,headers=headers,proxies=proxies,timeout=3)
     except:
     	print('代理IP {}连接超时，切换'.format(proxy_ip))
