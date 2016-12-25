@@ -26,12 +26,14 @@ proxy_list=[
     'http://111.13.109.27:80',
     'http://111.13.7.42:81'
     ]
-proxy_ip=random.choice(proxy_list)
-proxies={'http':proxy_ip}
+
 
 # 目标对象是活跃用户，活跃表现为发连载和参与见证，所以以行为标的——连载为单位进行挖掘，而不是用户（因为用户可能流失、不活跃）
 def get_lz_info(url,i=150,t1=10,t2=0):  # 预设每爬取i=150 条暂停t1=10秒
 	try:
+		proxy_ip=random.choice(proxy_list)
+		proxies={'http':proxy_ip}
+		print('此时代理IP为： ',proxies)
 		wb_data=requests.get(url,headers=headers,proxies=proxies,timeout=3)
 	except:
 		print('代理IP {}连接超时，切换继续'.format(proxy_ip))
@@ -75,7 +77,11 @@ def get_lz_info(url,i=150,t1=10,t2=0):  # 预设每爬取i=150 条暂停t1=10秒
 
 def get_user_info(url,i=200,t1=12,t2=0):
 	print(url)
-	try:
+	try:	
+		
+		proxy_ip=random.choice(proxy_list)
+		proxies={'http':proxy_ip}
+		print('此时代理IP为： ',proxies)
 		wb_data = requests.get(url,proxies=proxies,timeout=3)
 	except:
 		print('代理IP {}连接超时，切换继续'.format(proxy_ip))
