@@ -85,7 +85,7 @@ def get_user_info(url,i=200,t1=12,t2=0):
 		wb_data = requests.get(url,proxies=proxies,timeout=3)
 	except:
 		print('代理IP {}连接超时，切换继续'.format(proxy_ip))
-		wb_data = request.get(url)
+		wb_data = requests.get(url)
 	wb = wb_data.text
 	soup = BeautifulSoup(wb, 'lxml')
 	if int(soup.select('li.plan-witness > div > span')[0].text) != 0:
