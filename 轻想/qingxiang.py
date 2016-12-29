@@ -14,8 +14,7 @@ proxy_list = [
     'http://120.27.113.72:8888',
     'http://119.29.232.113:3128'
     ]
-proxy_ip=random.choice(proxy_list) # 随机获取代理ip
-proxies={'http':proxy_ip}
+
 
 headers={
 'Connection':'keep-alive',
